@@ -1,0 +1,19 @@
+import assert from 'node:assert/strict';import{readFileSync}from'node:fs';import{pbkdf2Sync,createDecipheriv}from'node:crypto';
+process.stdin.setRawMode(true);process.stdout.write('Ready for migration test JSON on stdin (input is hidden).\n');let raw='';
+process.stdin.on('data',async chunk=>{raw+=chunk.toString();if(!raw.includes('\n'))return;process.stdin.pause();try{
+ const input=JSON.parse(raw.trim());raw='';const base='http://127.0.0.1:32769';let checks=0;const check=(v,m)=>{assert.ok(v,m);checks++};
+ const backup=JSON.parse(readFileSync(new URL('../private/migration.enc.json',import.meta.url),'utf8'));const key=pbkdf2Sync(input.password,Buffer.from(backup.salt,'base64'),210000,32,'sha256');const dec=createDecipheriv('aes-256-gcm',key,Buffer.from(backup.iv,'base64'));dec.setAAD(Buffer.from('cafe-flore-migration-v1'));dec.setAuthTag(Buffer.from(backup.tag,'base64'));const original=JSON.parse(Buffer.concat([dec.update(Buffer.from(backup.ciphertext,'base64')),dec.final()]).toString('utf8'));
+ const page=await fetch(base+'/setup.php'),html=await page.text();check(page.status===200,'installer available');const cookie=page.headers.get('set-cookie').split(';')[0];const csrf=html.match(/name="csrf" value="([a-f0-9]+)"/)[1];
+ const fields={csrf,install_key:readFileSync(new URL('../private/install-key.txt',import.meta.url),'utf8').trim(),db_host:'cafe-flore-ovh-test-db',db_port:'3306',db_name:'flore_migration',db_user:'flore_test',db_password:'flore_test_only',public_url:base,mode:'migrate',backup_password:input.password};
+ async function install(overrides){const r=await fetch(base+'/setup.php',{method:'POST',headers:{Origin:base,Cookie:cookie,'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({...fields,...overrides})});return{status:r.status,text:await r.text()}}
+ check((await install({install_key:'wrong'})).status===403,'setup key enforced');
+ const bad=await install({backup_password:'wrong'});check(bad.status===400&&bad.text.includes('Nieprawidłowe hasło kopii danych.'),'bad backup password rejected');
+ const result=await install({});if(result.status!==200){console.log(result.text.slice(result.text.indexOf('<body>'),result.text.indexOf('<form')));throw new Error('Migration installation failed '+result.status)}check(result.text.includes('Instalacja zakończona.'),'migration installation completed');check((await fetch(base+'/setup.php')).status===404,'installer locked');
+ const auth=await fetch(base+'/api/auth',{method:'POST',headers:{Origin:base,'Content-Type':'application/json'},body:JSON.stringify({pin:input.pin})});check(auth.status===200,'original owner PIN preserved');const login=await auth.json();check(login.user.role==='admin','owner role preserved');const session=auth.headers.get('set-cookie').split(';')[0];
+ const exported=await(await fetch(base+'/api/export',{headers:{Cookie:session}})).json();
+ function normalize(rows){return rows.map(row=>Object.fromEntries(Object.entries(row).map(([k,v])=>[k,['checklist_meta','values_json'].includes(k)&&v?JSON.parse(v):v]))).sort((a,b)=>String(a.id).localeCompare(String(b.id)))}
+ for(const [name,rows]of Object.entries(original.tables)){assert.deepEqual(normalize(exported.tables[name]),normalize(rows),'full migration '+name);checks++}
+ const d=await(await fetch(base+'/api/data?day=2026-11-26',{headers:{Cookie:session}})).json();check(d.routines.length===58,'all real cycles preserved');check(d.members.length===original.tables.members.length,'all real accounts preserved');
+ for(const path of ['/private/config.php','/private/migration.enc.json','/.env'])check([403,404].includes((await fetch(base+path)).status),'private file blocked');
+ console.log(JSON.stringify({passed:checks,php:'8.4',migration:'passed',counts:Object.fromEntries(Object.entries(exported.tables).map(([k,v])=>[k,v.length])),pinPreserved:true}));process.exit(0);
+}catch(error){console.error(JSON.stringify({error:error.message}));process.exit(1)}});

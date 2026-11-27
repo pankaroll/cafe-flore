@@ -1,0 +1,1104 @@
+[
+  {
+    "title": "Włącz neon i oznakowanie",
+    "description": "Sprawdź, czy neon i oznakowanie lokalu są włączone i widoczne.",
+    "time": "",
+    "category": "opening",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 10,
+      "sourceId": "cafe-flore:opening_001",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Włącz światła i muzykę",
+    "description": "Przygotuj oświetlenie i muzykę na sali.",
+    "time": "",
+    "category": "opening",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 20,
+      "sourceId": "cafe-flore:opening_002",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Sprawdź POS i terminal",
+    "description": "Sprawdź, czy POS, terminal płatniczy i urządzenia sprzedażowe działają poprawnie.",
+    "time": "",
+    "category": "opening",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 30,
+      "sourceId": "cafe-flore:opening_003",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Sprawdź stan kasy",
+    "description": "Sprawdź gotówkę i przygotowanie kasy do sprzedaży.",
+    "time": "",
+    "category": "opening",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 40,
+      "sourceId": "cafe-flore:opening_004",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Sprawdź temperatury urządzeń chłodniczych",
+    "description": "Sprawdź temperaturę dwóch lodówek produkcyjnych i zamrażarki.",
+    "time": "",
+    "category": "opening",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 50,
+      "sourceId": "cafe-flore:opening_005",
+      "requiresValue": true,
+      "valueType": "temperature",
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Sprawdź porządek na barze",
+    "description": "Bar powinien być czysty, uporządkowany i gotowy do rozpoczęcia pracy.",
+    "time": "",
+    "category": "opening",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 60,
+      "sourceId": "cafe-flore:opening_006",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Sprawdź stanowisko kuchenne",
+    "description": "Blaty, grill, gofrownica i podstawowy sprzęt powinny być gotowe do pracy.",
+    "time": "",
+    "category": "opening",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 70,
+      "sourceId": "cafe-flore:opening_007",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Sprawdź podstawowe produkty",
+    "description": "Sprawdź, czy podstawowe produkty potrzebne na początek zmiany są dostępne.",
+    "time": "",
+    "category": "opening",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": false,
+      "section": "",
+      "sortOrder": 80,
+      "sourceId": "cafe-flore:opening_008",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Przygotuj witrynę",
+    "description": "Sprawdź czystość, ekspozycję i gotowość witryny.",
+    "time": "",
+    "category": "opening",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 90,
+      "sourceId": "cafe-flore:opening_009",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Przygotuj salę",
+    "description": "Stoliki, krzesła i podłoga powinny być uporządkowane.",
+    "time": "",
+    "category": "opening",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 100,
+      "sourceId": "cafe-flore:opening_010",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Sprawdź WC",
+    "description": "Sprawdź czystość oraz dostępność papieru, mydła i ręczników.",
+    "time": "",
+    "category": "opening",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 110,
+      "sourceId": "cafe-flore:opening_011",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Sprawdź uwagi z poprzedniej zmiany",
+    "description": "Przeczytaj zgłoszone braki, awarie i informacje pozostawione przez poprzednią zmianę.",
+    "time": "",
+    "category": "opening",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 120,
+      "sourceId": "cafe-flore:opening_012",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Umyj blaty baru",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Bar",
+      "sortOrder": 1010,
+      "sourceId": "cafe-flore:closing_001",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Odłóż produkty i sprzęt na miejsce",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Bar",
+      "sortOrder": 1020,
+      "sourceId": "cafe-flore:closing_002",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Wyczyść zabrudzone butelki i syropy",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Bar",
+      "sortOrder": 1030,
+      "sourceId": "cafe-flore:closing_003",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Wyczyść grupy ekspresu",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Ekspres i kawa",
+      "sortOrder": 2010,
+      "sourceId": "cafe-flore:closing_010",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Umyj kolby i sitka",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Ekspres i kawa",
+      "sortOrder": 2020,
+      "sourceId": "cafe-flore:closing_011",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Wyczyść dysze mleczne",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Ekspres i kawa",
+      "sortOrder": 2030,
+      "sourceId": "cafe-flore:closing_012",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Umyj tackę ociekową",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Ekspres i kawa",
+      "sortOrder": 2040,
+      "sourceId": "cafe-flore:closing_013",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Wyczyść młynek i okolice dozowania",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Ekspres i kawa",
+      "sortOrder": 2050,
+      "sourceId": "cafe-flore:closing_014",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Umyj blaty produkcyjne",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Kuchnia",
+      "sortOrder": 3010,
+      "sourceId": "cafe-flore:closing_020",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Umyj deski, noże i narzędzia",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Kuchnia",
+      "sortOrder": 3020,
+      "sourceId": "cafe-flore:closing_021",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Wyczyść grill panini",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Kuchnia",
+      "sortOrder": 3030,
+      "sourceId": "cafe-flore:closing_022",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Wyczyść gofrownicę po produkcji",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Kuchnia",
+      "sortOrder": 3040,
+      "sourceId": "cafe-flore:closing_023",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Sprawdź Retigo",
+    "description": "Usuń resztki i wykonaj czyszczenie zgodnie z potrzebą i procedurą.",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Kuchnia",
+      "sortOrder": 3050,
+      "sourceId": "cafe-flore:closing_024",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Umyj wszystkie naczynia",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Zmywalnia",
+      "sortOrder": 4010,
+      "sourceId": "cafe-flore:closing_030",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Pozostaw pusty zlew",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Zmywalnia",
+      "sortOrder": 4020,
+      "sourceId": "cafe-flore:closing_031",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Oczyść filtry wyparzarki",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Zmywalnia",
+      "sortOrder": 4030,
+      "sourceId": "cafe-flore:closing_032",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Umyj zlew i baterię",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Zmywalnia",
+      "sortOrder": 4040,
+      "sourceId": "cafe-flore:closing_033",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Odłóż czyste naczynia",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Zmywalnia",
+      "sortOrder": 4050,
+      "sourceId": "cafe-flore:closing_034",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Zabezpiecz wszystkie otwarte produkty",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Lodówki i żywność",
+      "sortOrder": 5010,
+      "sourceId": "cafe-flore:closing_040",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Odłóż produkty na właściwe miejsca",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Lodówki i żywność",
+      "sortOrder": 5020,
+      "sourceId": "cafe-flore:closing_041",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Usuń rozlane produkty i zabrudzenia",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Lodówki i żywność",
+      "sortOrder": 5030,
+      "sourceId": "cafe-flore:closing_042",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Sprawdź oznaczenia i daty przygotowanych produktów",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Lodówki i żywność",
+      "sortOrder": 5040,
+      "sourceId": "cafe-flore:closing_043",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Umyj stoliki",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Sala",
+      "sortOrder": 6010,
+      "sourceId": "cafe-flore:closing_050",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Ustaw krzesła i uporządkuj salę",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Sala",
+      "sortOrder": 6020,
+      "sourceId": "cafe-flore:closing_051",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Odkurz lub zamieć podłogę",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Sala",
+      "sortOrder": 6030,
+      "sourceId": "cafe-flore:closing_052",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Umyj podłogę",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Sala",
+      "sortOrder": 6040,
+      "sourceId": "cafe-flore:closing_053",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Umyj toaletę",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "WC",
+      "sortOrder": 7010,
+      "sourceId": "cafe-flore:closing_060",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Umyj umywalkę i baterię",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "WC",
+      "sortOrder": 7020,
+      "sourceId": "cafe-flore:closing_061",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Sprawdź lustro",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "WC",
+      "sortOrder": 7030,
+      "sourceId": "cafe-flore:closing_062",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Umyj podłogę",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "WC",
+      "sortOrder": 7040,
+      "sourceId": "cafe-flore:closing_063",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Uzupełnij papier, mydło i ręczniki",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "WC",
+      "sortOrder": 7050,
+      "sourceId": "cafe-flore:closing_064",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Opróżnij kosze",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Na koniec",
+      "sortOrder": 8010,
+      "sourceId": "cafe-flore:closing_070",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Umyj zabrudzone kosze",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": false,
+      "section": "Na koniec",
+      "sortOrder": 8020,
+      "sourceId": "cafe-flore:closing_071",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Odłóż środki czystości na miejsce",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Na koniec",
+      "sortOrder": 8030,
+      "sourceId": "cafe-flore:closing_072",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Odłóż brudne ścierki do wyznaczonego miejsca",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Na koniec",
+      "sortOrder": 8040,
+      "sourceId": "cafe-flore:closing_073",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Pozostaw mop i sprzęt sprzątający czyste",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Na koniec",
+      "sortOrder": 8050,
+      "sourceId": "cafe-flore:closing_074",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Sprawdź, czy lokal jest gotowy na poranną zmianę",
+    "description": "",
+    "time": "",
+    "category": "closing",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 127,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "Na koniec",
+      "sortOrder": 8060,
+      "sourceId": "cafe-flore:closing_075",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Dokładne czyszczenie zmywalni",
+    "description": "Regały przy zmywaku, półki nad zlewem, szafki i trudno dostępne miejsca.",
+    "time": "",
+    "category": "weekly_cleaning",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 2,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 10,
+      "sourceId": "cafe-flore:weekly_001",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Gruntowne sprzątanie WC",
+    "description": "Kafelki, ściany, drzwi i trudno dostępne miejsca.",
+    "time": "",
+    "category": "weekly_cleaning",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 4,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 20,
+      "sourceId": "cafe-flore:weekly_002",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Dokładne sprzątanie sali",
+    "description": "Kurze, parapety, listwy, nogi stolików i krzeseł.",
+    "time": "",
+    "category": "weekly_cleaning",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 4,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 30,
+      "sourceId": "cafe-flore:weekly_003",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Dokładne czyszczenie baru kawowego",
+    "description": "Ekspres z zewnątrz i od góry, dostępne miejsca pod sprzętem, młynek i półki.",
+    "time": "",
+    "category": "weekly_cleaning",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 8,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 40,
+      "sourceId": "cafe-flore:weekly_004",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Dokładne mycie lodówek",
+    "description": "Półki, szuflady, uszczelki, uchwyty i kontrola terminów.",
+    "time": "",
+    "category": "weekly_cleaning",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 16,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 50,
+      "sourceId": "cafe-flore:weekly_005",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Dokładne czyszczenie wyparzarki i zmywalni",
+    "description": "Wykonaj zgodnie z instrukcją urządzenia. Umyj również okolice i kafelki.",
+    "time": "",
+    "category": "weekly_cleaning",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 32,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 60,
+      "sourceId": "cafe-flore:weekly_006",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Klamki, fronty i miejsca często dotykane",
+    "description": "Dokładnie wyczyść drzwi, klamki, fronty szafek i włączniki.",
+    "time": "",
+    "category": "weekly_cleaning",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 64,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 70,
+      "sourceId": "cafe-flore:weekly_007",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Porządek w magazynie",
+    "description": "Półki, produkty, FIFO/FEFO, terminy i przestrzenie pod regałami.",
+    "time": "",
+    "category": "weekly_cleaning",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 1,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 80,
+      "sourceId": "cafe-flore:weekly_008",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": false
+    }
+  },
+  {
+    "title": "Kontrola śladów szkodników",
+    "description": "Sprawdź magazyn i zaplecze pod kątem nietypowych śladów lub uszkodzeń produktów.",
+    "time": "",
+    "category": "weekly_cleaning",
+    "priority": "normal",
+    "assigneeId": "",
+    "weekdays": 1,
+    "endsOn": "",
+    "checklist": {
+      "required": true,
+      "section": "",
+      "sortOrder": 90,
+      "sourceId": "cafe-flore:weekly_009",
+      "requiresValue": false,
+      "valueType": null,
+      "requiresNoteOnFail": true
+    }
+  }
+]

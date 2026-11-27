@@ -1,0 +1,34 @@
+<?php
+declare(strict_types=1);
+ini_set('display_errors','0');
+require dirname(__DIR__).'/private/src/App.php';
+require dirname(__DIR__).'/private/src/Installer.php';
+use CafeFlore\App;use CafeFlore\ApiError;use CafeFlore\Installer;
+header('Cache-Control: no-store');header('X-Frame-Options: DENY');header('X-Content-Type-Options: nosniff');header('Referrer-Policy: no-referrer');
+$installer=new Installer(dirname(__DIR__).'/private');
+if($installer->installed()){http_response_code(404);exit('Instalator jest wyłączony.');}
+$secure=(!empty($_SERVER['HTTPS'])&&$_SERVER['HTTPS']!=='off');
+session_name('flore_setup');session_set_cookie_params(['httponly'=>true,'secure'=>$secure,'samesite'=>'Strict','path'=>rtrim(str_replace('\\','/',dirname($_SERVER['SCRIPT_NAME'])),'/').'/']);session_start();
+if(!isset($_SESSION['csrf']))$_SESSION['csrf']=bin2hex(random_bytes(32));
+$error='';$result=null;$requestUrl=($secure?'https':'http').'://'.($_SERVER['HTTP_HOST']??'localhost').rtrim(str_replace('\\','/',dirname($_SERVER['SCRIPT_NAME'])),'/');
+if($_SERVER['REQUEST_METHOD']==='POST'){
+    try{
+        if(!hash_equals($_SESSION['csrf'],(string)($_POST['csrf']??'')))throw new ApiError(403,'Sesja formularza wygasła. Odśwież stronę.');
+        if(isset($_SERVER['HTTP_ORIGIN'])&&$_SERVER['HTTP_ORIGIN']!==App::origin($requestUrl))throw new ApiError(403,'Nieprawidłowe źródło formularza.');
+        $result=$installer->install($_POST);$_SESSION=[];session_destroy();
+    }catch(ApiError $e){$error=$e->getMessage();http_response_code($e->status);}
+    catch(PDOException $e){$error='Nie udało się połączyć lub przygotować bazy MySQL. Sprawdź dane połączenia oraz uprawnienia użytkownika.';error_log('Cafe Flore setup database: '.(string)$e->getCode());http_response_code(400);}
+    catch(Throwable $e){$error='Instalacja nie została zakończona. Sprawdź pliki paczki i uprawnienia katalogu private.';error_log('Cafe Flore setup: '.get_class($e));http_response_code(500);}
+}
+function h(mixed $v):string{return htmlspecialchars((string)$v,ENT_QUOTES|ENT_SUBSTITUTE,'UTF-8');}
+$hasBackup=is_file(dirname(__DIR__).'/private/migration.enc.json');$selectedMode=$_POST['mode']??($hasBackup?'migrate':'fresh');
+?><!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Instalacja Cafe Flore</title><style>
+*{box-sizing:border-box}body{font:15px/1.65 system-ui,sans-serif;color:#304530;background:#f5f7f0;margin:0;padding:36px 18px}main{max-width:720px;margin:auto;background:#fff;border:1px solid #e0e6d6;border-radius:14px;padding:32px}h1{margin:0 0 14px;font:32px Georgia,serif}h2{font-size:18px;margin:26px 0 16px}p{color:#718363}label{display:block;font-size:13px;margin:16px 0 6px}input,select{display:block;width:100%;padding:11px;border:1px solid #d8e1cd;border-radius:6px;font:inherit;background:#fff}button,.button{display:inline-block;margin-top:22px;padding:12px 20px;background:#355543;color:#fff;border:0;border-radius:7px;font:inherit;text-decoration:none;cursor:pointer}.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}.error{padding:14px;background:#fff0e7;color:#9c6244;border-radius:6px}.hint{font-size:12px;color:#889c76}code{background:#f1f4e9;padding:2px 4px}fieldset{border:0;padding:0;margin:0}legend{font-size:18px;margin:20px 0 6px}.result{background:#edf4e3;padding:18px;border-radius:8px}@media(max-width:600px){.row{grid-template-columns:1fr;gap:0}main{padding:24px}}
+</style></head><body><main><h1>Cafe Flore — instalacja</h1>
+<?php if($result):?><div class="result"><strong>Instalacja zakończona.</strong><p><?php foreach(['members'=>'Konta','routines'=>'Cykle','tasks'=>'Zadania','events'=>'Wpisy historii'] as $table=>$label):?><?=h($label)?>: <?=h($result['counts'][$table]??0)?> · <?php endforeach; ?></p></div><p><?php if($result['mode']==='migrate'):?>Zaloguj się dotychczasowym PIN-em. Konta, cykle i historia zostały przeniesione.<?php else:?>Zaloguj się PIN-em właściciela podanym w formularzu.<?php endif; ?></p><a class="button" href="<?=h($result['url'])?>/">Otwórz aplikację</a>
+<?php else:?><p>Wgraj katalogi <code>public</code> i <code>private</code> obok siebie. Katalogiem domeny musi być <code>public</code>.</p><?php if($error):?><div class="error" role="alert"><?=h($error)?></div><?php endif; ?><form method="post" autocomplete="off"><input type="hidden" name="csrf" value="<?=h($_SESSION['csrf'])?>">
+<label>Kod instalacyjny<input name="install_key" type="password" required autocomplete="off"></label><p class="hint">Kod znajdziesz w pliku private/install-key.txt.</p>
+<fieldset><legend>Baza MySQL w OVHcloud</legend><label>Serwer bazy danych<input name="db_host" required placeholder="np. nazwabazy.mysql.db" value="<?=h($_POST['db_host']??'')?>"></label><div class="row"><label>Nazwa bazy<input name="db_name" required value="<?=h($_POST['db_name']??'')?>"></label><label>Użytkownik<input name="db_user" required value="<?=h($_POST['db_user']??'')?>"></label></div><div class="row"><label>Hasło bazy<input name="db_password" type="password" required autocomplete="new-password"></label><label>Port<input name="db_port" type="number" min="1" max="65535" value="<?=h($_POST['db_port']??3306)?>" required></label></div></fieldset>
+<label>Docelowy adres aplikacji<input name="public_url" type="url" required value="<?=h($_POST['public_url']??$requestUrl)?>"></label>
+<fieldset><legend>Dane aplikacji</legend><label>Tryb instalacji<select name="mode" id="mode"><option value="migrate" <?php echo $selectedMode==='migrate' ? 'selected' : ''; ?> <?=$hasBackup?'':'disabled'?>>Przenieś dane z dołączonej kopii</option><option value="fresh" <?php echo $selectedMode==='fresh' ? 'selected' : ''; ?>>Nowa instalacja z 58 zadaniami</option></select></label><div id="migration-fields"><label>Hasło kopii danych<input name="backup_password" type="password" autocomplete="off"></label><p class="hint">Hasło do kopii otrzymasz osobno. Przy migracji dotychczasowe PIN-y pozostaną ważne.</p></div><div id="fresh-fields"><label>Nazwa właściciela<input name="owner_name" value="Właściciel" maxlength="80"></label><label>PIN właściciela<input name="owner_pin" type="password" inputmode="numeric" pattern="[0-9]{6,8}" minlength="6" maxlength="8" autocomplete="new-password"></label></div></fieldset>
+<button type="submit">Zainstaluj aplikację</button></form><script>const mode=document.getElementById('mode');function update(){const migrate=mode.value==='migrate';document.getElementById('migration-fields').hidden=!migrate;document.getElementById('fresh-fields').hidden=migrate;document.querySelector('[name=backup_password]').required=migrate;document.querySelector('[name=owner_pin]').required=!migrate}mode.addEventListener('change',update);update()</script><?php endif; ?></main></body></html>

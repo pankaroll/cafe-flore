@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+private/config.php
+private/config.*.tmp
+private/installed.lock
+private/.install-running
+private/install-key.txt
+private/migration*.json
+*.sql.gz
+*.dump
+*.log
